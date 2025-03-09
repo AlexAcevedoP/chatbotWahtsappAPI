@@ -71,7 +71,7 @@ class WhatsAppService {
 
   }
 
-  async sendMedialMessage(to, type, mediaUrl, caption){
+  async sendMediaMessage(to, type, mediaUrl, caption){
     try{
       const mediaObject = {};
       switch (type){
