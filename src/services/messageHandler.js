@@ -2,6 +2,11 @@ import { response } from 'express';
 import whatsappService from './whatsappService.js';
 
 class MessageHandler {
+  
+  constructor(){
+    this.appointmentState = {};
+  }
+  
   async handleIncomingMessage(message, senderInfo) {
     if (message?.type === 'text') {
       //covertir el mensaje a minusculas y quitar espacios
@@ -11,6 +16,9 @@ class MessageHandler {
       if(this.isGreeting(incomingMessage)){
         await this.sendWelcomeMessage(message.from, message.id, senderInfo);
         await this.sendWelcomeMenu(message.from);
+      }else if (this.appointmentState[message.from]) {
+        // Manejar el flujo de citas
+        await this.handleAppointmentFlow(message.from, incomingMessage);
       }else if(incomingMessage === 'media'){
         await this.sendMedia(message.from);
       }else{      
@@ -60,7 +68,8 @@ class MessageHandler {
     let response;
   switch (option) {
     case 'agendar':
-      response = 'Agendar una Cita';      
+      this.appointmentState[to] = {step: 'name'};
+      response = "Por favor, ingresa tu nombre:";
       break;
     case 'consultar':
       response = ' Realizar una consulta';
@@ -96,6 +105,33 @@ class MessageHandler {
 
     await whatsappService.sendMediaMessage(to, type, mediaUrl, caption);
   } 
+
+  async handleAppointmentFlow(to, message){
+    const state = this.appointmentState[to];
+    let response;
+
+    switch(state.step){
+      case 'name':
+        state.name = message;
+        state.step = 'petName';
+        response = "Gracias, Ahora, por favor, dime el nombre de tu mascota";
+        break;
+        case 'petName':
+          state.petName = message;
+          state.step = 'petType';
+          response = "Gracias, Ahora, por favor, dime el tipo de mascota (Perro, Gato, etc)";
+          break;
+        case 'petType':
+          state.petType = message;
+          state.step = 'reason';
+          response = "Gracias, Ahora, por favor, dime el motivo de la consulta";
+          break;
+        case 'reason':
+          state.reason = message;
+          response = "Gracias por agendar tu cita";
+    }
+    await whatsappService.sendMessage(to, response);
+  }
 
 }
 
