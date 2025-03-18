@@ -1,5 +1,6 @@
 import { response } from 'express';
 import whatsappService from './whatsappService.js';
+import appendToSheet from './googleSheetsServices.js';
 
 class MessageHandler {
   
@@ -118,7 +119,7 @@ class MessageHandler {
       appointment.reason,
       new Date().toISOString()
     ]
-    console.log(userData);
+    appendToSheet(userData);
 
     return `Gracias por agendar tu cita.
     Resumen de la cita:
