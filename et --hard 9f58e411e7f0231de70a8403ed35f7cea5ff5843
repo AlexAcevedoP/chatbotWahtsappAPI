@@ -1,0 +1,77 @@
+[33mcommit 8d1bb35667df02ee9699af4dd5ad8768c05d87e8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Mar 19 19:01:25 2025 -0500
+
+    Remove credentials.json from repository and add to .gitignore
+
+[33mcommit dceb92057bd4ef9f744fcddc739de318bc73da0d[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Mar 19 17:20:09 2025 -0500
+
+    Remove credentials.json from repository and add to .gitignore
+
+[33mcommit 2bb207250f87b2f828ef7c7555a12ab3390eaaf5[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Mar 19 17:12:46 2025 -0500
+
+    conectar la API de WhatsApp con ChatGPT
+
+[33mcommit 9f58e411e7f0231de70a8403ed35f7cea5ff5843[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Mon Mar 17 20:01:02 2025 -0500
+
+    conectar y configurar con google sheets
+
+[33mcommit a4065eed0662b3ae33c34866331194f5a9891176[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Mar 12 18:51:06 2025 -0500
+
+    logica para almacenar el flujo
+
+[33mcommit b1feeef7abdfd688bd2088320a3ca2d7451d5fa1[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Mon Mar 10 09:58:08 2025 -0500
+
+    flujo para agendar citas
+
+[33mcommit b16b3442fc3f33cb90e208969f795cb927f92afa[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Sun Mar 9 15:45:39 2025 -0500
+
+    enviar multimedia
+
+[33mcommit 40eadd7fda164d4e4728b68c774324549acb4fee[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Thu Mar 6 12:54:15 2025 -0500
+
+    integrar mensajes multimedia
+
+[33mcommit 64cbdf378b268fb1dcf23252de4b60fccce8d7b2[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Mon Mar 3 18:51:01 2025 -0500
+
+    saludos personalizados con el nombre de usuario
+
+[33mcommit 93e7ccc98f85d32aac193462df14e1557ad3149b[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Thu Feb 20 21:04:33 2025 -0500
+
+    Adaptar a MVC
+
+[33mcommit 5f1de522aebdf1fa6a99221f7593f9bb8463787c[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Feb 19 19:25:47 2025 -0500
+
+    Adaptar a MVC
+
+[33mcommit b30396c8eb61165487e45d5596b8b946b1782a7f[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Wed Feb 19 18:41:14 2025 -0500
+
+    Cómo implementar Webhooks en Express
+
+[33mcommit cf5af3a507705810553ca1b017331031793068b6[m
+Author: Alex <conelalex89@gmail.com>
+Date:   Sat Feb 15 21:02:13 2025 -0500
+
+    crear servidor express
